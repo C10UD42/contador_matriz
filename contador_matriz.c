@@ -17,9 +17,9 @@ const uint led_pin_red   = 13; //Led rgb vermelho
 const uint button_A = 5; // Botão A = 5
 const uint button_B = 6; //Botão B = 6
 
-uint8_t led_r = 75; // Intensidade do vermelho
+uint8_t led_r = 40; // Intensidade do vermelho
 uint8_t led_g = 0; // Intensidade do verde
-uint8_t led_b = 75; // Intensidade do azul
+uint8_t led_b = 40; // Intensidade do azul
 
 uint8_t current_number = 0;
 
@@ -100,6 +100,7 @@ void blink_led_vermelho(){
 
 int main()
 {
+    stdio_init_all();
     PIO pio = pio0;
     int sm = 0;
     uint offset = pio_add_program(pio, &contador_matriz_program);
